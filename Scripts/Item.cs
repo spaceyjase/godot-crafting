@@ -1,16 +1,17 @@
-using System;
 using System.Collections.Generic;
 using Godot;
 
-public class Item
+public class Item : Resource
 {
-  public int Id { get; } // TODO: auto-generate?
-  public string Title { get; }
-  public string Description { get; }
-  public Sprite Icon { get; }
-  public Dictionary<string, int> Stats { get; }
+  [Export] public int Id { get; set; } // TODO: auto-generate?
+  [Export] public string Title { get; set;  }
+  [Export] public string Description { get; set; }
+  [Export] public Sprite Icon { get; set; }
+  [Export] public Dictionary<string, int> Stats { get; set; }
 
-  public Item(int id, string title, string description, Sprite icon, Dictionary<string, int> stats)
+  public Item() { } // required by godot
+
+  public Item(int id = 0, string title = "", string description = "", Sprite icon = null, Dictionary<string, int> stats = null)
   {
     Id = id;
     Title = title;
