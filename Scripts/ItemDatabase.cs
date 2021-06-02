@@ -1,11 +1,9 @@
 using Godot;
 using System.Collections.Generic;
 
-public class ItemDatabase : Resource
+public class ItemDatabase : Node     // TODO: resource
 {
-    // TODO: alternate data structure (for lookup?)
-    [Export]
-    private List<Item> items = new List<Item>();
+    private readonly List<Item> items = new List<Item>();
 
     public ItemDatabase()
     {
@@ -24,26 +22,12 @@ public class ItemDatabase : Resource
 
     private void BuildItemDatabase()
     {
-        // TODO: use resources
-        items = new List<Item>()
+        foreach (var resource in ResourceGrabber.GetResources("res://Resources/Items/"))
         {
-            new Item(1, "Diamond Axe", "An axe made of diamond.",
-                null,
-                new Dictionary<string, int> {
-                    { "Power", 15 },
-                    { "Defence", 7 }
-                }),
-            new Item(2, "Diamond Ore", "A shiny diamond.",
-                null,
-                new Dictionary<string, int> {
-                    { "Value", 2500 }
-                }),
-            new Item(3, "Iron Axe", "An axe made of iron.",
-                null,
-                new Dictionary<string, int> {
-                    { "Power", 8 },
-                    { "Defence", 10 }
-                })
-        };
+            if (!(resource is Item item)) continue;
+            
+            items.Add(item);
+            GD.Print($"Loaded item: {item.Title}");
+        }
     }
 }

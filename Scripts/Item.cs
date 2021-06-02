@@ -16,7 +16,7 @@ public class Item : Resource
     Id = id;
     Title = title;
     Description = description;
-    Icon = icon;  // TODO: load from resources
+    Icon = icon;
     Stats = stats;
   }
 
