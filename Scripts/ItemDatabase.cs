@@ -1,7 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
-public class ItemDatabase : Node     // TODO: resource
+public class ItemDatabase
 {
     private readonly List<Item> items = new List<Item>();
 

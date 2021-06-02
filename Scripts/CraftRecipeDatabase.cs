@@ -2,15 +2,15 @@ using Godot;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CraftRecipeDatabase : Node
+public class CraftRecipeDatabase
 {
-  [Export] private ItemDatabase itemDatabase;
+  private readonly ItemDatabase itemDatabase;
 
   private readonly List<CraftRecipe> recipes = new List<CraftRecipe>();
 
-  public override void _Ready()
+  public CraftRecipeDatabase(ItemDatabase itemDatabase)
   {
-    base._Ready();
+    this.itemDatabase = itemDatabase;
     BuildCraftRecipeDatabase();
   }
 
