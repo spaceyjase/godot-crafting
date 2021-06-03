@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Item.cs" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+Id = 4
+Title = "Wooden Plank"
+Description = "A plank made from wood."
+Stats = {
+"Defence": 10,
+"Power": 8
+}

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource( 1 )
-RequiredItems = PoolIntArray( 0, 2, 0, 0, 2, 0, 0, 1, 0 )
-ItemToCraft = 3
+RequiredItems = PoolIntArray( 0, 2, 0, 0, 2, 0, 0, 2, 0 )
+ItemToCraft = 4
