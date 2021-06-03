@@ -10,14 +10,14 @@ public class ItemDatabase
     BuildItemDatabase();
   }
 
-  public Item GetItem(int id)
-  {
-    return items.Find(item => item.Id == id);
-  }
-
   public Item GetItem(string title)
   {
     return items.Find(item => item.Title == title);
+  }
+  
+  public Item GetItem(Item item)
+  {
+    return items.Find(i => i == item);
   }
 
   private void BuildItemDatabase()

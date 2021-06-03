@@ -14,11 +14,11 @@ public class CraftRecipeDatabase
     BuildCraftRecipeDatabase();
   }
 
-  public Item CheckRecipe(IEnumerable<int> recipe)
+  public Item CheckRecipe(IEnumerable<Item> recipe)
   {
     return (from craftRecipe in recipes
       where craftRecipe.RequiredItems.SequenceEqual(recipe)
-      select itemDatabase.GetItem(craftRecipe.ItemToCraft)).FirstOrDefault();
+      select itemDatabase.GetItem(craftRecipe.ItemToCraft)).FirstOrDefault();   // TODO: item, not item.id
   }
 
   private void BuildCraftRecipeDatabase()

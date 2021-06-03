@@ -3,7 +3,6 @@ using Godot;
 
 public class Item : Resource
 {
-  [Export] public int Id { get; set; } // TODO: auto-generate?
   [Export] public string Title { get; set;  }
   [Export] public string Description { get; set; }
   [Export] public Sprite Icon { get; set; }
@@ -11,9 +10,8 @@ public class Item : Resource
 
   public Item() { } // required by godot
 
-  public Item(int id = 0, string title = "", string description = "", Sprite icon = null, Dictionary<string, int> stats = null)
+  public Item(string title = "", string description = "", Sprite icon = null, Dictionary<string, int> stats = null)
   {
-    Id = id;
     Title = title;
     Description = description;
     Icon = icon;
@@ -22,7 +20,6 @@ public class Item : Resource
 
   public Item(Item item)
   {
-    Id = item.Id;
     Title = item.Title;
     Description = item.Description;
     Icon = item.Icon;

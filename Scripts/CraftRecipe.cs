@@ -3,12 +3,12 @@ using Godot;
 
 public class CraftRecipe : Resource
 {
-  [Export] public int[] RequiredItems { get; set; }
-  [Export] public int ItemToCraft { get; set; } // the item produced in return for items
+  [Export] public Item[] RequiredItems { get; set; }
+  [Export] public Item ItemToCraft { get; set; } // the item produced in return for items
 
   public CraftRecipe() { }
 
-  public CraftRecipe(int[] requiredItems, int itemToCraft)
+  public CraftRecipe(Item[] requiredItems, Item itemToCraft)
   {
     this.RequiredItems = requiredItems;
     this.ItemToCraft = itemToCraft;

@@ -4,7 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-Id = 1
 Title = "Diamond Sword"
 Description = "A diamond sword."
 Stats = {

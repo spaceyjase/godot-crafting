@@ -4,7 +4,9 @@
 
 [resource]
 script = ExtResource( 1 )
-Title = "Wood"
-Description = "It's wood!"
+Title = "Iron"
+Description = "Iron ore."
 Stats = {
+"Defence": 5,
+"Power": 5
 }

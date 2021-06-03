@@ -18,11 +18,6 @@ public class CraftingManager : Node
     Instance = this;
   }
 
-  public static Item GetItem(int id)
-  {
-    return Instance.itemDatabase.GetItem(id);
-  }
-  
   public static Item GetItem(string itemName)
   {
     return Instance.itemDatabase.GetItem(itemName);
