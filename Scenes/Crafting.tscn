@@ -8,4 +8,4 @@
 [node name="CraftingManager" type="Node" parent="."]
 script = ExtResource( 1 )
 
-[node name="Inventory" parent="." instance=ExtResource( 2 )]
+[node name="UIInventory" parent="CraftingManager" instance=ExtResource( 2 )]
