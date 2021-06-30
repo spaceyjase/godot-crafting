@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/UI/Slot.tscn" type="PackedScene" id=1]
+
+[node name="Inventory" type="Node2D"]
+
+[node name="InventoryPanel" type="Panel" parent="."]
+anchor_bottom = 1.0
+margin_left = 96.0
+margin_top = 181.0
+margin_right = 305.0
+margin_bottom = 392.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SlotGrid" type="GridContainer" parent="InventoryPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="Slot2" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="Slot3" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="Slot4" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
+
+[node name="Slot5" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 132.0
+
+[node name="Slot6" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 132.0
+
+[node name="Slot7" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+
+[node name="Slot8" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 200.0
+
+[node name="Slot9" parent="InventoryPanel/SlotGrid" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 200.0
