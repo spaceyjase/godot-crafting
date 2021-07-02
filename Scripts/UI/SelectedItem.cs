@@ -17,4 +17,11 @@ public class SelectedItem : Position2D
 
     slot = GetNode<Slot>(nameof(Slot));
   }
+
+  public override void _Process(float delta)
+  {
+    base._Process(delta);
+
+    Position = GetViewport().GetMousePosition();
+  }
 }
