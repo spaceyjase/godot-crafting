@@ -23,6 +23,8 @@ public class CraftingManager : Node
     // TODO: test
     var item = itemDatabase.GetItem("Diamond Axe");
     inventoryUi.AddItem(item);
+    item = itemDatabase.GetItem("Diamond");
+    inventoryUi.AddItem(item);
   }
 
   public static Item GetItem(string itemName)

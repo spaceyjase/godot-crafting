@@ -33,15 +33,8 @@ public class UIInventory : Node2D
 
   private void OnSlotPanel_Clicked(Slot slot)
   {
-    if (slot.Item != null)
-    {
-      selectedItem.Item = slot.Item;
-      slot.Item = null;
-    }
-    else if (selectedItem.Item != null)
-    {
-      slot.Item = selectedItem.Item;
-      selectedItem.Item = null;
-    }
+    var item = selectedItem.Item;
+    selectedItem.Item = slot.Item;
+    slot.Item = item;
   }
 }

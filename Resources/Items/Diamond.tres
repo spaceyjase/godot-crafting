@@ -1,11 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Item.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/ore_diamond.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
 Title = "Diamond"
 Description = "Diamond."
+Icon = ExtResource( 2 )
 Stats = {
 "Defence": 10,
 "Power": 8
