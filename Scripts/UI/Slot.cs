@@ -3,8 +3,6 @@ using System;
 
 public class Slot : Control
 {
-  [Export] private bool processInput = true;
-  
   [Signal] public delegate void OnClick(Slot slot);
   
   private TextureRect itemImage;

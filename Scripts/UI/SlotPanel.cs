@@ -5,6 +5,8 @@ using crafting.Scripts.Extensions;
 
 public class SlotPanel : Node
 {
+  [Signal] public delegate void InventoryClick(Slot slot);
+  
   private readonly List<Slot> slots = new List<Slot>();
 
   public override void _Ready()
@@ -38,9 +40,6 @@ public class SlotPanel : Node
 
   public void OnSlot_Clicked(Slot slot)
   {
-    if (slot.Item != null)
-    {
-      GD.Print(slot.Item.Title);
-    }
+    EmitSignal(nameof(InventoryClick), slot);
   }
 }
