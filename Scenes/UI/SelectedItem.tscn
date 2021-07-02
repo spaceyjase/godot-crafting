@@ -1,14 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="SelectedItem" type="TextureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[ext_resource path="res://Scenes/UI/Slot.tscn" type="PackedScene" id=1]
+
+[node name="SelectedItem" type="Position2D"]
+
+[node name="Slot" parent="." instance=ExtResource( 1 )]
+
+[editable path="Slot"]

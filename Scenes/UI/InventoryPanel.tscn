@@ -9,6 +9,8 @@
 [node name="Inventory" type="Node2D"]
 script = ExtResource( 5 )
 
+[node name="SelectedItem" parent="." instance=ExtResource( 3 )]
+
 [node name="Inventory" type="Control" parent="."]
 anchor_bottom = 1.0
 margin_left = 48.0
@@ -377,5 +379,3 @@ margin_left = 136.0
 margin_top = 136.0
 margin_right = 200.0
 margin_bottom = 200.0
-
-[node name="SelectedItem" parent="." instance=ExtResource( 3 )]

@@ -13,6 +13,10 @@ public class SlotPanel : Node
 
     var grid = GetChild(1);
     slots.AddRange(grid.GetChildren<Slot>());
+    foreach (var slot in slots)
+    {
+      slot.Connect(nameof(Slot.OnClick), this, nameof(OnSlot_Clicked));
+    }
   }
 
   public void UpdateSlot(int slot, Item item)
@@ -31,4 +35,12 @@ public class SlotPanel : Node
   }
 
   public bool HasEmptySlot => slots.Any(slot => slot.Item == null);
+
+  public void OnSlot_Clicked(Slot slot)
+  {
+    if (slot.Item != null)
+    {
+      GD.Print(slot.Item.Title);
+    }
+  }
 }

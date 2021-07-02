@@ -3,6 +3,10 @@ using System;
 
 public class Slot : Control
 {
+  [Export] private bool processInput = true;
+  
+  [Signal] public delegate void OnClick(Slot slot);
+  
   private TextureRect itemImage;
 
   private Item item;
@@ -31,5 +35,15 @@ public class Slot : Control
     base._Ready();
 
     itemImage = GetNode<TextureRect>("Item");
+  }
+
+  public void OnSlot_GuiInput(InputEvent @event)
+  {
+    if (!(@event is InputEventMouseButton mouseButton)) return;
+
+    if (mouseButton.Pressed && mouseButton.ButtonIndex == (int)ButtonList.Left)
+    {
+      EmitSignal(nameof(OnClick), this);
+    }
   }
 }

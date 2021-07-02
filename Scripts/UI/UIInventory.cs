@@ -13,11 +13,6 @@ public class UIInventory : Node2D
   {
     base._Ready();
     panels.AddRange(this.GetChildren<SlotPanel>());
-
-    foreach (var panel in panels)
-    {
-      GD.Print(panel.Name);
-    }
   }
 
   public void AddItem(Item item)
