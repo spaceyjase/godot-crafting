@@ -6,10 +6,9 @@
 [ext_resource path="res://Scripts/UI/SlotPanel.cs" type="Script" id=4]
 [ext_resource path="res://Scripts/UI/UIInventory.cs" type="Script" id=5]
 
-[node name="Inventory" type="Node2D"]
+[node name="UIInventory" type="Node2D"]
 script = ExtResource( 5 )
-
-[node name="SelectedItem" parent="." instance=ExtResource( 3 )]
+selectedItemScene = ExtResource( 3 )
 
 [node name="Inventory" type="Control" parent="."]
 anchor_bottom = 1.0
