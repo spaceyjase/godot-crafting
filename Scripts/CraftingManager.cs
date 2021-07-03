@@ -25,6 +25,16 @@ public class CraftingManager : Node
     inventoryUi.AddItem(item);
     item = itemDatabase.GetItem("Diamond");
     inventoryUi.AddItem(item);
+    inventoryUi.AddItem(item);
+    item = itemDatabase.GetItem("Wood");
+    inventoryUi.AddItem(item);
+    inventoryUi.AddItem(item);
+    inventoryUi.AddItem(item);
+    inventoryUi.AddItem(item);
+    inventoryUi.AddItem(item);
+    item = itemDatabase.GetItem("Gold");
+    inventoryUi.AddItem(item);
+    inventoryUi.AddItem(item);
   }
 
   public static Item GetItem(string itemName)
