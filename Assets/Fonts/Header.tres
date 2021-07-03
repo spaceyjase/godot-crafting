@@ -1,0 +1,10 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Fonts/fira_mono_medium.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 32
+outline_size = 1
+outline_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
