@@ -1,12 +1,14 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Item.cs" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/wood.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/axe_gold.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
-Title = "Wood"
-Description = "It's wood!"
+Title = "Gold Axe"
+Description = "A gold axe. It's a bit soft?"
 Icon = ExtResource( 2 )
 Stats = {
+"Defence": 10,
+"Power": 8
 }
