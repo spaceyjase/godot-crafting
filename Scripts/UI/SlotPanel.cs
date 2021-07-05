@@ -5,9 +5,14 @@ using crafting.Scripts.Extensions;
 
 public class SlotPanel : Node
 {
-  [Signal] public delegate void InventoryClick(Slot slot);
+  [Export] private bool crafting;
+  
+  [Signal] public delegate void InventoryClick(SlotPanel panel, Slot slot);
+  [Signal] public delegate void ItemCrafted(Item newItem);
   
   private readonly List<Slot> slots = new List<Slot>();
+
+  public bool IsCrafting => crafting;
 
   public override void _Ready()
   {
@@ -21,9 +26,26 @@ public class SlotPanel : Node
     }
   }
 
-  public void UpdateSlot(int slot, Item item)
+  private void UpdateSlot(int slot, Item item)
   {
     slots[slot].Item = item;
+  }
+  
+  public void CraftItem()
+  {
+    if (!crafting) return;
+    
+    var craftableItem = CraftingManager.HasRecipe(slots.Select(s => s.Item));
+    if (craftableItem == null) return;
+    
+    GD.Print($"Crafted: {craftableItem.Title}");
+    EmitSignal(nameof(ItemCrafted), new Item(craftableItem));
+    EmptyAllSlots();
+  }
+
+  private void EmptyAllSlots()
+  {
+    slots.ForEach(slot => slot.Item = null);
   }
 
   public void AddNewItem(Item item)
@@ -40,6 +62,6 @@ public class SlotPanel : Node
 
   public void OnSlot_Clicked(Slot slot)
   {
-    EmitSignal(nameof(InventoryClick), slot);
+    EmitSignal(nameof(InventoryClick), this, slot);
   }
 }

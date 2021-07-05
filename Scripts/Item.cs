@@ -14,7 +14,7 @@ public class Item : Resource
   {
     Title = title;
     Description = description;
-    Icon = icon;  // TODO: lookup
+    Icon = icon;
     Stats = stats;
   }
 

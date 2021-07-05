@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public class CraftingManager : Node
 {
@@ -13,6 +14,7 @@ public class CraftingManager : Node
   public override void _Ready()
   {
     if (Instance != null) return;
+    
     Instance = this;
     
     itemDatabase = new ItemDatabase();
@@ -40,5 +42,10 @@ public class CraftingManager : Node
   public static Item GetItem(string itemName)
   {
     return Instance.itemDatabase.GetItem(itemName);
+  }
+
+  public static Item HasRecipe(IEnumerable<Item> items)
+  {
+    return Instance.craftRecipeDatabase.CheckRecipe(items);
   }
 }

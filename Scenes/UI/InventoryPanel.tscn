@@ -269,6 +269,7 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
+crafting = true
 
 [node name="Background" type="NinePatchRect" parent="Crafting"]
 modulate = Color( 0.0392157, 0.615686, 0.929412, 1 )
